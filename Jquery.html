@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Novel Library</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<div class="warper">
+
+    <div class="header">
+           <div class="navibar ">
+                <div class="navbut" data-showtab="tabHome">Home</div>
+                <div class="navbut" data-showtab="tabCont">Contact</div>
+                <div class="navbut" data-showtab="tabAbout">About Me</div>
+           </div>
+    </div>
+
+<hr>
+
+<div class="contain">
+
+    <div class="tab tabHome">
+        <div class="Chapter-content">
+            <p>
+                Darklight Mode On
+            </p>
+        </div>
+
+        <div class="mode">
+            <p>Dark Light Mode</p>
+            <div class="Btn ButOn active">ON</div>
+            <div class="Btn ButOff ">OFF</div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+    /* region Darklight*/
+        $('.Btn').click(function () {
+            $('.Btn').toggleClass('active');
+        });
+        $('.ButOn').click(function () {
+            $('.Chapter-content p').text('Darklight Mode On')
+        });
+        $('.ButOff').click(function () {
+            $('.Chapter-content p').text('Darklight Mode Off')
+        });
+    /* endregion Darlight*/
+
+    /* region Tab Control*/
+
+        $('.navbut').click(function () {
+            $('.navbut').removeClass('active');
+            $(this).addClass('active');
+
+            tabShow = $(this).data('showtab');
+            $('.tab').hide();
+            $('.'+tabShow).show();
+        });
+
+
+    /* endregion Tab Control*/
+
+
+</script>
+
+
+
+</body>
+</html>
