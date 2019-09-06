@@ -30,10 +30,16 @@
         </div>
 
         <div class="mode">
-            <p>Dark Light Mode</p>
+            <p>Change Contact Number</p>
             <div class="Btn ButOn active">ON</div>
             <div class="Btn ButOff ">OFF</div>
         </div>
+    </div>
+
+    <div class="tab tabCont">
+
+        <p> 123456</p>
+
     </div>
 
 
@@ -52,10 +58,10 @@
             $('.Btn').toggleClass('active');
         });
         $('.ButOn').click(function () {
-            $('.Chapter-content p').text('Darklight Mode On')
+            $('.Chapter-content p').text('Changed Number')
         });
         $('.ButOff').click(function () {
-            $('.Chapter-content p').text('Darklight Mode Off')
+            $('.Chapter-content p').text('Original Number')
         });
     /* endregion Darlight*/
 
@@ -68,10 +74,28 @@
             tabShow = $(this).data('showtab');
             $('.tab').hide();
             $('.'+tabShow).show();
+
+
         });
 
 
     /* endregion Tab Control*/
+
+    /* region Change Number*/
+
+
+        $(document).ready(function () {
+            $('.ButOn').click(function () {
+                $('.tabCont p').text('987654')
+            })
+            $('.ButOff').click(function () {
+                $('.tabCont p').text('123456')
+            })
+
+        })
+
+    /* endregion Change Number*/
+
 
 
 </script>
